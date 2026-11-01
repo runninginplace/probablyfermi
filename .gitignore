@@ -1,0 +1,15 @@
+# Planning material (SOP, mockups): kept on this computer, never published.
+planning/
+
+# Jekyll and Bundler output
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+.bundle/
+vendor/
+
+# Windows
+Thumbs.db
+desktop.ini
+*.lnk

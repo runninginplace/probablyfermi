@@ -1,0 +1,35 @@
+---
+layout: default
+title: Releases
+permalink: /releases/
+---
+{%- comment -%}
+  Placeholder layout, there to prove the hub → site pipeline. Field names are the hub's:
+  see docs/releases.schema.json in fermi-hub.
+{%- endcomment -%}
+<h1>Releases</h1>
+
+{% assign releases = site.data.releases.releases %}
+{% if releases and releases.size > 0 %}
+  {% for r in releases %}
+  <article id="{{ r.slug }}">
+    {% if r.cover %}
+    <img src="{{ r.cover.thumb.path | relative_url }}" width="{{ r.cover.thumb.width }}"
+         height="{{ r.cover.thumb.height }}" alt="Cover of {{ r.title | escape }}">
+    {% endif %}
+    <h2>{{ r.title | escape }}</h2>
+    <p>{{ r.kind | capitalize }}{% if r.released %} · {{ r.released | date: "%B %-d, %Y" }}{% endif %}</p>
+    {% if r.blurb != "" %}<p>{{ r.blurb | escape | newline_to_br }}</p>{% endif %}
+    {% if r.tracks.size > 1 %}
+    <ol>{% for t in r.tracks %}<li>{{ t | escape }}</li>{% endfor %}</ol>
+    {% endif %}
+    {% if r.links.size > 0 %}
+    <p>{% for l in r.links %}<a href="{{ l.url | escape }}" rel="noopener">{{ l.name | escape }}</a>{% unless forloop.last %} · {% endunless %}{% endfor %}</p>
+    {% endif %}
+    <p>Credits: {{ r.credits | escape | newline_to_br }}</p>
+    {% if r.production_notes != "" %}<p>{{ r.production_notes | escape | newline_to_br }}</p>{% endif %}
+  </article>
+  {% endfor %}
+{% else %}
+  <p>Nothing released yet.</p>
+{% endif %}

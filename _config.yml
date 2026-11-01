@@ -1,0 +1,16 @@
+title: "fermi"
+description: "Music by fermi."
+
+# baseurl is left empty here: the GitHub Actions build sets it from the repository's Pages address.
+# Locally, `bundle exec jekyll serve` serves the site at http://127.0.0.1:4000/.
+baseurl: ""
+
+# _data/releases.yml and assets/releases/ are written by fermi hub on every publish. Don't edit them
+# here: the next publish replaces them.
+
+exclude:
+  - planning/
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor/

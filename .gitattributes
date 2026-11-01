@@ -1,0 +1,11 @@
+# LF everywhere, on every computer: fermi hub writes _data/releases.yml with LF and compares it
+# byte for byte, and GitHub's Linux builders expect LF too.
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.gif binary
+*.ico binary
+*.woff2 binary
+*.pdf binary
