@@ -1,7 +1,11 @@
 title: "fermi"
 description: "Music by fermi."
 
-# baseurl is left empty here: the GitHub Actions build sets it from the repository's Pages address.
+# The custom domain (DreamHost DNS → GitHub Pages). It must also be set in the repository's
+# Settings → Pages → Custom domain: deploys made by GitHub Actions don't read the CNAME file.
+url: "https://probablyfermi.gay"
+# Empty because the site sits at the root of its domain. The GitHub Actions build passes the Pages
+# base path anyway, which is also empty while the custom domain is set.
 # Locally, `bundle exec jekyll serve` serves the site at http://127.0.0.1:4000/.
 baseurl: ""
 

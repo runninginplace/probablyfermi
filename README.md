@@ -22,7 +22,12 @@ Then open http://127.0.0.1:4000/.
 
 ## Publishing
 
-Every push to `main` builds and deploys the site (`.github/workflows/pages.yml`). One-time setup on
-GitHub: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+Every push to `main` builds and deploys the site (`.github/workflows/pages.yml`) to
+https://probablyfermi.gay. One-time setup on GitHub, in **Settings → Pages**:
+
+- **Build and deployment → Source: GitHub Actions.**
+- **Custom domain: probablyfermi.gay**, then **Enforce HTTPS** once the certificate is ready. With
+  Actions deploys GitHub takes the domain from this setting, not from the `CNAME` file; the file is
+  kept as a record of it. DNS for the domain is at DreamHost.
 
 `planning/` (the SOP and mockups) is gitignored: it stays on this computer and is never published.
