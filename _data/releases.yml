@@ -1,0 +1,26 @@
+# Written by fermi hub on every publish. Don't edit it by hand: the next publish replaces it.
+# Its shape is described in docs/releases.schema.json in the hub's repository.
+schema: 1
+generated_by: "fermi-hub"
+releases:
+  - slug: "neon-glacier"
+    title: "Neon Glacier"
+    kind: "single"
+    released: "2026-11-01"
+    blurb: "A test release, published by fermi hub to check the pipeline. It will be removed."
+    credits: "fermi"
+    production_notes: "Made from the hub's demo files."
+    tracks:
+      - "Neon Glacier"
+    links:
+      - name: "Bandcamp"
+        url: "https://bandcamp.com/"
+    cover:
+      full:
+        path: "assets/releases/neon-glacier/cover.jpg"
+        width: 1200
+        height: 1200
+      thumb:
+        path: "assets/releases/neon-glacier/thumb.jpg"
+        width: 500
+        height: 500
